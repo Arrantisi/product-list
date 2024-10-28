@@ -9,7 +9,7 @@ import { ProductType, SearchParams } from "@/types";
 import axios, { AxiosError } from "axios";
 import { useAtom } from "jotai";
 import { deleteButtonR } from "@/lib/jotai";
-import DeleteCard from "./delete-contact";
+import DeleteCard from "./delete-product";
 import { PaginationWithLinks } from "../ui/pagination-with-link";
 import { useDebouncedCallback } from "use-debounce";
 import { toast } from "sonner";

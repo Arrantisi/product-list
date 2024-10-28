@@ -17,7 +17,6 @@ const DeleteCard = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const [isDelete, setIsdelete] = useAtom(deleteButton);
-
   const [isProductId] = useAtom(productId);
 
   const handleButton = async () => {

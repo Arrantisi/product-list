@@ -21,7 +21,7 @@ import axios, { AxiosError } from "axios";
 import { ErrorResponse } from "@/types";
 
 const UpdateProduct = ({ params }: { params: string }) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const { replace } = useRouter();
 
   const form = useForm<ProductSchema>({
@@ -42,6 +42,7 @@ const UpdateProduct = ({ params }: { params: string }) => {
       const response = await axios.get<ProductSchema>(
         `/api/products/${dataId}`
       );
+      setIsLoading(false);
       const { name, brand, catagory, description, price } = response.data;
       setValue("name", name);
       setValue("brand", brand);
@@ -180,6 +181,7 @@ const UpdateProduct = ({ params }: { params: string }) => {
               <FormLabel>Product Caragory</FormLabel>
               <FormControl>
                 <Textarea
+                  disabled={isLoading}
                   rows={5}
                   placeholder="Product Catagory"
                   {...field}

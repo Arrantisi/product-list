@@ -13,7 +13,7 @@ const CreateProductLayout = ({ children }: { children: ReactNode }) => {
     <div className="w-full h-screen flex justify-center items-center">
       <Card className="w-[724px]">
         <CardHeader>
-          <CardTitle>Add Product</CardTitle>
+          <CardTitle>Card Product</CardTitle>
           <CardDescription>Lorem ipsum dolor sit amet.</CardDescription>
         </CardHeader>
         <CardContent>{children}</CardContent>
